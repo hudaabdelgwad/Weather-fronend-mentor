@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+   --breakpoint-xs: 500px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 788px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+  /* optionally --screen-2xl, etc */
+}
+
+/* Optionally, override container widths, etc. */
+@layer base {
+  *, ::before, ::after {
+    @apply box-border;
+  }
+}
+@layer components {
+ .headingMenu{
+  @apply !ml-5 text-[#ACACB7] !text-sm !font-[DM] !font-medium;
+ }
+ .bodyMenu{
+  @apply !font-[DM] !font-medium !text-base;
+ }
+ .card {
+  @apply !bg-[#262540] !capitalize h-[118px] !flex !flex-col !gap-6 flex-1 !rounded-xl border-[1px] !border-[#3C3B5E] !min-w-28
+ }
+ .cardBpdy{
+  @apply !text-white !text-[2rem] !font-[DM] !font-light
+ }
+ .cardBpdyDF{
+  @apply !text-white !text-[2rem] !font-[DM] !font-light
+ }
+}
+@layer utilities {
+  /* custom utilities if needed */
+}
+
+@font-face {
+  font-family: DM;
+  src: url("/fonts/DM_Sans/DMSans-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: DM;
+  src: url("/fonts/DM_Sans/DMSans-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: DM;
+  src: url("/fonts/DM_Sans/DMSans-SemiBoldItalic.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: DM;
+  src: url("/fonts/DM_Sans/DMSans-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: DM;
+  src: url("/fonts/DM_Sans/DMSans-Medium.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Grotesque;
+  src: url("/fonts/Bricolage_Grotesque/BricolageGrotesque-Bold.ttf");
+  font-weight: 700;
+}
